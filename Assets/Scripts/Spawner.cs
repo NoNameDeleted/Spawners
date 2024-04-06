@@ -1,28 +1,24 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private float _delay = 2.0f;
-    [SerializeField] private Enemy _enemy;
-    [SerializeField] private Transform[] _spawners;
+    [SerializeField] private SpawnPoint[] _spawners;
 
     private void Start()
     {
-        StartCoroutine(SpawnEnemy(_delay, _enemy));
+        StartCoroutine(ChooseSpawner(_delay));
     }
 
-    private IEnumerator SpawnEnemy(float delay, Enemy enemy)
+    private IEnumerator ChooseSpawner(float delay)
     {
-        var wait = new WaitForSeconds(delay);
+        WaitForSeconds wait = new WaitForSeconds(delay);
 
         while (true)
         {
-            Transform spawnPoint = _spawners[Random.Range(0, _spawners.Length)];
-            Enemy createdEnemy = Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
-            createdEnemy.SetDirection(new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0));
+            SpawnPoint spawner = _spawners[Random.Range(0, _spawners.Length)];
+            spawner.SpawnEnemy();
 
             yield return wait;
         }
