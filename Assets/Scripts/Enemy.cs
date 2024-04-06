@@ -5,7 +5,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private float _speed;
 
-    private Vector3 _direction;
+    private Vector3 _targetPosition;
     private SpriteRenderer _spriteRenderer;
 
     private Dictionary<ElementType, Color> _colors = new Dictionary<ElementType, Color>()
@@ -19,20 +19,21 @@ public class Enemy : MonoBehaviour
 
     public void SetDirection(Vector3 direction)
     {
-        _direction = direction;
+        _targetPosition = direction;
     }
 
     public void SetColorType(ElementType type)
     {
         _spriteRenderer.color = _colors[type];
     }
-    private void OnEnable()
+
+    private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, _direction, _speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, _targetPosition, _speed * Time.deltaTime);
     }
 }
