@@ -153,7 +153,7 @@ PrefabInstance:
       objectReference: {fileID: 1111138911}
     - target: {fileID: 7007043097401620769, guid: 7bc94c32117545049b532f70481e34bb, type: 3}
       propertyPath: m_Name
-      value: SpawnPoint
+      value: Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 8937867822623724931, guid: 7bc94c32117545049b532f70481e34bb, type: 3}
       propertyPath: m_RootOrder
@@ -327,7 +327,7 @@ PrefabInstance:
       objectReference: {fileID: 1219306532}
     - target: {fileID: 7007043097401620769, guid: 7bc94c32117545049b532f70481e34bb, type: 3}
       propertyPath: m_Name
-      value: SpawnPoint (4)
+      value: Spawner (4)
       objectReference: {fileID: 0}
     - target: {fileID: 8937867822623724931, guid: 7bc94c32117545049b532f70481e34bb, type: 3}
       propertyPath: m_RootOrder
@@ -489,7 +489,7 @@ GameObject:
   - component: {fileID: 621193658}
   - component: {fileID: 621193659}
   m_Layer: 0
-  m_Name: Spawners
+  m_Name: Distributor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -575,7 +575,7 @@ PrefabInstance:
       objectReference: {fileID: 1542931903}
     - target: {fileID: 7007043097401620769, guid: 7bc94c32117545049b532f70481e34bb, type: 3}
       propertyPath: m_Name
-      value: SpawnPoint (3)
+      value: Spawner (3)
       objectReference: {fileID: 0}
     - target: {fileID: 8937867822623724931, guid: 7bc94c32117545049b532f70481e34bb, type: 3}
       propertyPath: m_RootOrder
@@ -938,7 +938,7 @@ PrefabInstance:
       objectReference: {fileID: 1667513014}
     - target: {fileID: 7007043097401620769, guid: 7bc94c32117545049b532f70481e34bb, type: 3}
       propertyPath: m_Name
-      value: SpawnPoint (2)
+      value: Spawner (2)
       objectReference: {fileID: 0}
     - target: {fileID: 8937867822623724931, guid: 7bc94c32117545049b532f70481e34bb, type: 3}
       propertyPath: m_RootOrder
@@ -1138,7 +1138,7 @@ PrefabInstance:
       objectReference: {fileID: 236536907}
     - target: {fileID: 7007043097401620769, guid: 7bc94c32117545049b532f70481e34bb, type: 3}
       propertyPath: m_Name
-      value: SpawnPoint (1)
+      value: Spawner (1)
       objectReference: {fileID: 0}
     - target: {fileID: 8937867822623724931, guid: 7bc94c32117545049b532f70481e34bb, type: 3}
       propertyPath: m_RootOrder
